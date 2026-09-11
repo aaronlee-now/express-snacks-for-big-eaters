@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout — Express Snacks for Big Eaters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-mark" href="index.html">Express Snacks for Big Eaters</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="shop.html">Shop</a>
+        <a class="cart-link" href="checkout.html">
+          Cart
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <div class="page-intro">
+        <h1>Checkout</h1>
+        <p>This is a demo. Nothing is charged. Your order stays on this device only.</p>
+      </div>
+
+      <div class="checkout-layout">
+        <section class="panel" aria-labelledby="order-heading">
+          <h2 id="order-heading">Your order</h2>
+          <div id="cart-panel"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="details-heading">
+          <h2 id="details-heading">Delivery details</h2>
+
+          <form id="checkout-form">
+            <div class="field">
+              <label for="full-name">Full name</label>
+              <input id="full-name" name="fullName" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="address">Address</label>
+              <input id="address" name="address" type="text" autocomplete="street-address" required />
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" autocomplete="address-level2" required />
+              </div>
+              <div class="field">
+                <label for="zip">ZIP</label>
+                <input id="zip" name="zip" type="text" autocomplete="postal-code" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="card">Card number (fake)</label>
+              <input
+                id="card"
+                name="card"
+                type="text"
+                inputmode="numeric"
+                placeholder="4242 4242 4242 4242"
+                required
+              />
+            </div>
+
+            <button class="btn" type="submit" id="place-order">Place order</button>
+            <p class="demo-note">No payment is processed. Submitting only shows a demo confirmation.</p>
+          </form>
+
+          <div class="confirm-box" id="confirm-box">
+            <h2>Order received (demo)</h2>
+            <p>
+              Thank you. In a real shop this would go to a kitchen. Here, your cart was cleared
+              and nothing was charged.
+            </p>
+            <p style="margin-top: 1rem">
+              <a class="btn btn-secondary" href="shop.html">Back to shop</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      Express Snacks for Big Eaters — demo storefront. No real payment.
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+</html>

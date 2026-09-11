@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop — Express Snacks for Big Eaters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-mark" href="index.html">Express Snacks for Big Eaters</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="shop.html">Shop</a>
+        <a class="cart-link" href="checkout.html">
+          Cart
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <div class="page-intro">
+        <h1>The selection</h1>
+        <p>
+          Nine items. High prices. Stocked for appetite, not for thrift.
+        </p>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer">
+      Express Snacks for Big Eaters — demo storefront. No real payment.
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>
