@@ -25,7 +25,7 @@ function getCartCount() {
   let total = 0;
 
   for (const productId in cart) {
-    // Skip unknown keys (for example old free-catch leftovers).
+    // Skip unknown product ids.
     if (!findProduct(productId)) {
       continue;
     }
